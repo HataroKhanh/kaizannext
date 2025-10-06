@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function NavBar() {
   const NAV_ITEMS: Menu[] = [
     { title: "Trang chủ", href: "#" },
-    { title: "Giáo trình Hán Ngữ", href: "giaotrinh" },
+    { title: "Giáo trình Hán Ngữ", href: "/giaotrinh" },
     { title: "Hội thoại", href: "#hoi-thoai" },
     { title: "Đọc hiểu", href: "#doc-hieu" },
     { title: "Luyện thi", href: "#luyen-thi" },
