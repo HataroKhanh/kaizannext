@@ -12,7 +12,7 @@ export default function Header() {
         <div className="flex items-center justify-between w-full">
           <Logo />
           <div className="flex items-center gap-6">
-            <Search />s
+            <Search />
             <Contact />
             <Account />
           </div>

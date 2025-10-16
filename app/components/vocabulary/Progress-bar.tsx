@@ -94,7 +94,7 @@ export default function ProgressCard({
   const rotation = `rotate(-90 ${C} ${C})`;
 
   return (
-    <div className={`progress-card ${className || ""}`.trim()}>
+    <div className={`progress-card  ${className || ""}`.trim()}>
       <div
         className="chart-container"
         style={{ width: pixelSize, height: pixelSize }}

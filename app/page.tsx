@@ -1,6 +1,5 @@
-import Header from "./components/header/Header";
-import Account from "./components/header/Account";
-import Footers from "./components/footer/Footer";
+import Header from "@/app/components/header/Header";
+import Footers from "@/app/components/footer/Footer";
 export default function Home() {
   return (
     <>
