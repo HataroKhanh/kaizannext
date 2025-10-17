@@ -1,6 +1,7 @@
 "use client";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
+import { signOut } from "next-auth/react";
 
 export default function Account() {
   const { data: session, status } = useSession();
@@ -13,14 +14,13 @@ export default function Account() {
     <>
       {!session ? (
         <button className="text-gray-950">
-          <Link href="/login">
-            Login
-          </Link>
+          <Link href="/login">Login</Link>
         </button>
       ) : (
-        <div className="text-gray-950">
-          {session.user?.name || "User"}
-        </div>
+        <>
+          <div className="text-gray-950 ">{session.user?.name || "User"}</div>
+          <button onClick={()=>signOut()} className="cursor-pointer">Logout</button>
+        </>
       )}
     </>
   );

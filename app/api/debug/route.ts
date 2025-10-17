@@ -1,0 +1,6 @@
+import { getToken } from "next-auth/jwt";
+
+export async function GET(req: Request) {
+  const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
+  return new Response(JSON.stringify({ role: token?.role ?? null }), { status: 200 });
+}
