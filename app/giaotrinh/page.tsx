@@ -3,30 +3,23 @@ import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import Link from "next/link";
 import {
-  GraduationCap,
-  Baby,
-  UserRound,
-  Medal,
-  Crown,
-  Trophy,
-  Home,
-  BookOpen,
-  Clock,
-  Star,
-  Lightbulb,
-  Repeat,
-  Volume2,
-  ChevronRight,
-  Book,
-  Play,
-} from "lucide-react";
-
-/**
- * HSK Curriculum Page
- * - Converted from provided HTML into idiomatic React/Next.js + Tailwind
- * - Split into small, reusable components
- * - Uses lucide-react icons (already available in this environment)
- */
+  FaGraduationCap,
+  FaBookOpen,
+  FaHome,
+  FaChevronRight,
+  FaBook,
+  FaClock,
+  FaStar,
+  FaPlay,
+  FaBaby,
+  FaUser,
+  FaMedal,
+  FaCrown,
+  FaTrophy,
+  FaLightbulb,
+  FaRedo,
+  FaVolumeUp,
+} from "react-icons/fa";
 
 export type Level = 1 | 2 | 3 | 4 | 5 | 6;
 
@@ -128,7 +121,7 @@ function PageHeader({ totalLessons }: { totalLessons: number }) {
           <div className="header-left">
             <div className="header-info">
               <h1 className="page-title flex items-center gap-3 text-3xl md:text-4xl font-extrabold tracking-tight">
-                <GraduationCap className="w-8 h-8" aria-hidden="true" />
+                <FaGraduationCap className="w-8 h-8" aria-hidden="true" />
                 Giáo Trình Hán Ngữ
               </h1>
               <p className="page-subtitle mt-2 text-white/90">
@@ -138,7 +131,7 @@ function PageHeader({ totalLessons }: { totalLessons: number }) {
           </div>
           <div className="header-stats">
             <div className="stat-item bg-white/10 backdrop-blur rounded-2xl px-5 py-3 inline-flex items-center gap-3">
-              <BookOpen className="w-5 h-5" aria-hidden="true" />
+              <FaBookOpen className="w-5 h-5" aria-hidden="true" />
               <div>
                 <div className="stat-number text-2xl font-bold leading-none">
                   {totalLessons}
@@ -162,15 +155,15 @@ function Breadcrumb() {
           className="breadcrumb-item flex items-center gap-1 hover:text-gray-900"
           title="Trang chủ"
         >
-          <Home className="w-4 h-4" aria-hidden="true" />
+          <FaHome className="w-4 h-4" aria-hidden="true" />
           <span className="breadcrumb-text">Trang chủ</span>
         </Link>
-        <ChevronRight className="w-4 h-4" aria-hidden="true" />
+        <FaChevronRight className="w-4 h-4" aria-hidden="true" />
         <div
           className="breadcrumb-item flex items-center gap-1 text-gray-900"
           title="Giáo Trình Hán Ngữ"
         >
-          <Book className="w-4 h-4" aria-hidden="true" />
+          <FaBook className="w-4 h-4" aria-hidden="true" />
           <span className="breadcrumb-text">Giáo Trình Hán Ngữ</span>
         </div>
       </nav>
@@ -202,15 +195,15 @@ function HSKCard({ data }: { data: HSKCardData }) {
 
           <div className="level-stats mt-4 grid grid-cols-1 gap-2 text-sm text-gray-700">
             <div className="stat inline-flex items-center gap-2">
-              <BookOpen className="w-4 h-4" aria-hidden="true" />
+              <FaBookOpen className="w-4 h-4" aria-hidden="true" />
               <span>{data.lessons} bài học</span>
             </div>
             <div className="stat inline-flex items-center gap-2">
-              <Clock className="w-4 h-4" aria-hidden="true" />
+              <FaClock className="w-4 h-4" aria-hidden="true" />
               <span>{data.duration}</span>
             </div>
             <div className="stat inline-flex items-center gap-2">
-              <Star className="w-4 h-4" aria-hidden="true" />
+              <FaStar className="w-4 h-4" aria-hidden="true" />
               <span>{data.difficulty}</span>
             </div>
           </div>
@@ -220,7 +213,7 @@ function HSKCard({ data }: { data: HSKCardData }) {
       <Link href={data.href} className="block">
         <div className="card-footer p-4 border-t">
           <button className="action-btn start w-full inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 font-medium bg-indigo-600 text-white hover:bg-indigo-700">
-            <Play className="w-4 h-4" aria-hidden="true" />
+            <FaPlay className="w-4 h-4" aria-hidden="true" />
             <span>Bắt đầu học</span>
           </button>
         </div>
@@ -240,12 +233,12 @@ function LevelBadge({ level }: { level: Level }) {
   };
 
   const icon = {
-    1: <Baby className="w-4 h-4" aria-hidden="true" />,
-    2: <UserRound className="w-4 h-4" aria-hidden="true" />,
-    3: <GraduationCap className="w-4 h-4" aria-hidden="true" />,
-    4: <Medal className="w-4 h-4" aria-hidden="true" />,
-    5: <Crown className="w-4 h-4" aria-hidden="true" />,
-    6: <Trophy className="w-4 h-4" aria-hidden="true" />,
+    1: <FaBaby className="w-4 h-4" aria-hidden="true" />,
+    2: <FaUser className="w-4 h-4" aria-hidden="true" />,
+    3: <FaGraduationCap className="w-4 h-4" aria-hidden="true" />,
+    4: <FaMedal className="w-4 h-4" aria-hidden="true" />,
+    5: <FaCrown className="w-4 h-4" aria-hidden="true" />,
+    6: <FaTrophy className="w-4 h-4" aria-hidden="true" />,
   } as const;
 
   return (
@@ -264,7 +257,7 @@ function TipsSection() {
       <div className="container mx-auto px-4">
         <div className="tips-card rounded-2xl border bg-white p-6 md:p-8 shadow-sm">
           <div className="tips-header flex items-center gap-3 mb-4">
-            <Lightbulb className="w-5 h-5 text-amber-500" aria-hidden="true" />
+            <FaLightbulb className="w-5 h-5 text-amber-500" aria-hidden="true" />
             <h3 className="text-lg md:text-xl font-bold">
               Mẹo học HSK hiệu quả
             </h3>
@@ -272,17 +265,17 @@ function TipsSection() {
 
           <div className="tips-content grid gap-4 md:grid-cols-3">
             <TipItem
-              icon={<Clock className="w-5 h-5" aria-hidden="true" />}
+              icon={<FaClock className="w-5 h-5" aria-hidden="true" />}
               title="Học đều đặn"
               desc="Dành 30 phút mỗi ngày để học từ vựng và ngữ pháp"
             />
             <TipItem
-              icon={<Repeat className="w-5 h-5" aria-hidden="true" />}
+              icon={<FaRedo className="w-5 h-5" aria-hidden="true" />}
               title="Lặp lại thường xuyên"
               desc="Ôn tập từ vựng cũ trong khi học từ vựng mới"
             />
             <TipItem
-              icon={<Volume2 className="w-5 h-5" aria-hidden="true" />}
+              icon={<FaVolumeUp className="w-5 h-5" aria-hidden="true" />}
               title="Luyện nghe nói"
               desc="Sử dụng tính năng phát âm để cải thiện khả năng nghe"
             />

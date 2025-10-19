@@ -28,9 +28,7 @@ export default function CharacterCard({ character, className }: Props) {
     <div
       className={[
         "relative rounded-2xl p-[1px] bg-gradient-to-tr",
-        // LIGHT: sáng, nhã với #4299e1 làm accent
         "from-[#eaf5ff] via-[#bfe2ff] to-[#4299e1]",
-        // DARK: giữ gradient rực
         "dark:from-emerald-500 dark:via-amber-500 dark:to-blue-500",
         className || "",
       ].join(" ")}
