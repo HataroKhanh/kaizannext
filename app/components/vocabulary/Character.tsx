@@ -88,24 +88,24 @@ export default function CharacterCard({ character, className }: Props) {
             <div className="flex-1 self-center">
               <ul className="grid-cols-2 grid  gap-5 ">
                 <li
-                  className="py-3 text-center border-[#ededed] border-2 rounded-2xl text-gray-800
+                  className="py-3 text-center border-[#ededed] border-2 rounded-2xl text-gray-800 dark:text-amber-50
                 "
                 >
                   <button>
                     <Link href="/">Nghe</Link>
                   </button>
-                </li>
-                <li className="py-3 text-center border-[#ededed] border-2 rounded-2xl text-gray-800">
+                </li> 
+                <li className="py-3 text-center border-[#ededed] border-2 rounded-2xl text-gray-800 dark:text-amber-50">
                   <button>
                     <Link href="/">Luyện Viết</Link>
                   </button>
                 </li>
-                <li className="py-3 text-center border-[#ededed] border-2 rounded-2xl text-gray-800">
+                <li className="py-3 text-center border-[#ededed] border-2 rounded-2xl text-gray-800 dark:text-amber-50">
                   <button>
                     <Link href={`/character/${idCharacter}`}>Chi Tiết</Link>
                   </button>
                 </li>
-                <li className="py-3 text-center border-[#ededed] border-2 rounded-2xl text-gray-800">
+                <li className="py-3 text-center border-[#ededed] border-2 rounded-2xl text-gray-800 dark:text-amber-50">
                   <button>Chưa học</button>
                 </li>
               </ul>
